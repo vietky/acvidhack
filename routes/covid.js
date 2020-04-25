@@ -15,6 +15,7 @@ router.post('/issues', function(req, res, next) {
   });
 
 router.put('/issues/:id', function(req, res, next) {
+    console.log('req.params', req.params)
     const issue = issueDb.updateIssue(req.params.id, req.body);
     res.status(200)
         .json(issue)
@@ -22,6 +23,7 @@ router.put('/issues/:id', function(req, res, next) {
 });
 
 router.delete('/issues/:id', function(req, res, next) {
+    console.log('req.params', req.params)
     issueDb.removeIssue(req.params.id);
     res.status(200)
         .json({

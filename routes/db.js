@@ -56,16 +56,21 @@ class IssueDb {
     }
     addIssue(issue) {
         issue.id = this.currentId++;
-        this.db[this.currentId] = issue;
+        this.db[issue.id] = issue;
         return issue;
     }
     updateIssue(id,issue) {
+        if (!this.db[id]) {
+            return null;
+        }
         issue.id = id;
         this.db[id] = issue;
         return issue;
     }
     removeIssue(id) {
+        const issue = this.db[id];
         delete this.db[id];
+        return issue;
     }
     getAllIssues() {
         const list = Object.values(this.db);
