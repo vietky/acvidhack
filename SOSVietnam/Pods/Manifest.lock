@@ -1,0 +1,80 @@
+PODS:
+  - Alamofire (5.0.4)
+  - Differentiator (4.0.1)
+  - Kingfisher (5.13.2):
+    - Kingfisher/Core (= 5.13.2)
+  - Kingfisher/Core (5.13.2)
+  - RxCocoa (5.1.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxCoreLocation (1.4.1):
+    - RxCoreLocation/Core (= 1.4.1)
+  - RxCoreLocation/Core (1.4.1):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxDataSources (4.0.1):
+    - Differentiator (~> 4.0)
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - RxOptional (4.1.0):
+    - RxCocoa (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.1.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.0)
+  - RxSwiftExt (5.2.0):
+    - RxSwiftExt/Core (= 5.2.0)
+    - RxSwiftExt/RxCocoa (= 5.2.0)
+  - RxSwiftExt/Core (5.2.0):
+    - RxSwift (~> 5.0)
+  - RxSwiftExt/RxCocoa (5.2.0):
+    - RxCocoa (~> 5.0)
+    - RxSwiftExt/Core
+  - RxWebKit (1.0.2):
+    - RxCocoa (~> 5.0)
+    - RxSwift (~> 5.0)
+  - SwiftDate (6.1.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - Kingfisher
+  - RxCoreLocation
+  - RxDataSources
+  - RxOptional
+  - RxSwift
+  - RxSwiftExt
+  - RxWebKit
+  - SwiftDate
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - Differentiator
+    - Kingfisher
+    - RxCocoa
+    - RxCoreLocation
+    - RxDataSources
+    - RxOptional
+    - RxRelay
+    - RxSwift
+    - RxSwiftExt
+    - RxWebKit
+    - SwiftDate
+
+SPEC CHECKSUMS:
+  Alamofire: 0fe5fd24b4298dc377a6550da7d5f1b30e286fcb
+  Differentiator: 886080237d9f87f322641dedbc5be257061b0602
+  Kingfisher: d342c8354c10c3d85a27d6d4c42c41285924b898
+  RxCocoa: 13d2a4d7546a34b8ececae8c281e4ea1dbb94f2b
+  RxCoreLocation: 85e9a3310c22619404dcbf91258d29c44429eea8
+  RxDataSources: efee07fa4de48477eca0a4611e6d11e2da9c1114
+  RxOptional: b1fcd60856807a564c0215c2184b8d33e7826dc2
+  RxRelay: a168bd6caf712d00c676ac344e9295afc93b418e
+  RxSwift: ad5874f24bb0dbffd1e9bb8443604e3578796c7a
+  RxSwiftExt: 4ca80336f43c28f11a2825cdd2fc61dd6c044697
+  RxWebKit: a3085e7cd8b57182b452692686675702474014dd
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+
+PODFILE CHECKSUM: dfd962044d5005d401ddec9814cc260d08ea6d96
+
+COCOAPODS: 1.8.4

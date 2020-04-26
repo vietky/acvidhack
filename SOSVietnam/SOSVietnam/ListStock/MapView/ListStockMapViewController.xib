@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListStockMapViewController" customModule="SOSVietnam" customModuleProvider="target">
+            <connections>
+                <outlet property="addressLabel" destination="qK7-r9-IQz" id="f6l-UR-bfh"/>
+                <outlet property="bottomMapConstraint" destination="PJ1-yN-stY" id="dUh-hT-bR1"/>
+                <outlet property="infoView" destination="QpB-QE-yvo" id="mrC-wQ-niC"/>
+                <outlet property="mapDetailBottomConstraint" destination="PJ1-yN-stY" id="k05-Cm-mIu"/>
+                <outlet property="mapView" destination="uhT-Ns-Yw3" id="Dkr-nS-T9D"/>
+                <outlet property="nameLabel" destination="ULj-4k-Gsp" id="n45-iD-2e6"/>
+                <outlet property="phoneButton" destination="UmT-Uq-ec7" id="mid-YH-0tD"/>
+                <outlet property="searchBar" destination="Cxs-3B-Gxi" id="PcD-zN-yJ5"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="uhT-Ns-Yw3">
+                    <rect key="frame" x="0.0" y="44" width="414" height="691"/>
+                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QpB-QE-yvo">
+                    <rect key="frame" x="0.0" y="735" width="414" height="127"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATM Gạo Quận 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ULj-4k-Gsp">
+                            <rect key="frame" x="16" y="16" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Cô Giang, Quận 1, Tp. Hồ Chí Minh" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qK7-r9-IQz">
+                            <rect key="frame" x="16" y="52.5" width="382" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UmT-Uq-ec7">
+                            <rect key="frame" x="16" y="89" width="388" height="22"/>
+                            <color key="tintColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" title="600020" image="phone" catalog="system">
+                                <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </state>
+                            <connections>
+                                <action selector="phoneClick:" destination="-1" eventType="touchUpInside" id="hDw-Oo-AbL"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="qK7-r9-IQz" firstAttribute="top" secondItem="ULj-4k-Gsp" secondAttribute="bottom" constant="16" id="2Bv-Id-a6P"/>
+                        <constraint firstItem="qK7-r9-IQz" firstAttribute="leading" secondItem="QpB-QE-yvo" secondAttribute="leading" constant="16" id="3VL-44-LKA"/>
+                        <constraint firstItem="UmT-Uq-ec7" firstAttribute="leading" secondItem="QpB-QE-yvo" secondAttribute="leading" constant="16" id="Hll-oP-2YU"/>
+                        <constraint firstItem="ULj-4k-Gsp" firstAttribute="leading" secondItem="QpB-QE-yvo" secondAttribute="leading" constant="16" id="S5x-kx-QaW"/>
+                        <constraint firstItem="ULj-4k-Gsp" firstAttribute="top" secondItem="QpB-QE-yvo" secondAttribute="top" constant="16" id="Sct-UN-9NA"/>
+                        <constraint firstAttribute="trailing" secondItem="UmT-Uq-ec7" secondAttribute="trailing" constant="10" id="Uqp-i9-pYb"/>
+                        <constraint firstAttribute="trailing" secondItem="qK7-r9-IQz" secondAttribute="trailing" constant="16" id="XaA-p4-gub"/>
+                        <constraint firstAttribute="bottom" secondItem="UmT-Uq-ec7" secondAttribute="bottom" constant="16" id="bcn-z9-mck"/>
+                        <constraint firstItem="UmT-Uq-ec7" firstAttribute="top" secondItem="qK7-r9-IQz" secondAttribute="bottom" constant="16" id="e43-DC-6xM"/>
+                        <constraint firstAttribute="trailing" secondItem="ULj-4k-Gsp" secondAttribute="trailing" constant="16" id="zL5-0T-ByA"/>
+                    </constraints>
+                </view>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Cxs-3B-Gxi">
+                    <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="uhT-Ns-Yw3" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4Lt-X9-f1z"/>
+                <constraint firstItem="Cxs-3B-Gxi" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="6t3-sb-anx"/>
+                <constraint firstItem="QpB-QE-yvo" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="NFd-4h-oEV"/>
+                <constraint firstItem="QpB-QE-yvo" firstAttribute="top" secondItem="uhT-Ns-Yw3" secondAttribute="bottom" id="PJ1-yN-stY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uhT-Ns-Yw3" secondAttribute="trailing" id="S7q-QH-uuC"/>
+                <constraint firstItem="QpB-QE-yvo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="VAk-ua-hJ9"/>
+                <constraint firstItem="Cxs-3B-Gxi" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="jg0-SM-tTY"/>
+                <constraint firstItem="Cxs-3B-Gxi" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="kdz-KE-z9G"/>
+                <constraint firstItem="uhT-Ns-Yw3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="tUB-xX-TDv"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="QpB-QE-yvo" secondAttribute="trailing" id="vRB-3w-Vuk"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="141.96428571428569"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="phone" catalog="system" width="64" height="56"/>
+    </resources>
+</document>

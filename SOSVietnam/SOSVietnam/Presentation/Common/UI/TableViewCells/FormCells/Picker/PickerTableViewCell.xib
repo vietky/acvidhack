@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="207" id="KGk-i7-Jjw" customClass="PickerTableViewCell" customModule="SOSVietnam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wFi-e7-U5N">
+                        <rect key="frame" x="16" y="41" width="288" height="150"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="150" id="NaI-Ce-fgL"/>
+                        </constraints>
+                    </pickerView>
+                    <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wxd-Lr-9vg">
+                        <rect key="frame" x="16" y="16" width="288" height="25"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="wFi-e7-U5N" secondAttribute="trailing" constant="16" id="2T2-TA-y94"/>
+                    <constraint firstAttribute="trailing" secondItem="Wxd-Lr-9vg" secondAttribute="trailing" constant="16" id="Me8-Fe-KFo"/>
+                    <constraint firstItem="wFi-e7-U5N" firstAttribute="top" secondItem="Wxd-Lr-9vg" secondAttribute="bottom" id="SLH-TZ-2ka"/>
+                    <constraint firstAttribute="bottom" secondItem="wFi-e7-U5N" secondAttribute="bottom" constant="16" id="XyW-JO-926"/>
+                    <constraint firstItem="Wxd-Lr-9vg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="rVl-Kq-0Kx"/>
+                    <constraint firstItem="wFi-e7-U5N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="uKO-Uw-0ux"/>
+                    <constraint firstItem="Wxd-Lr-9vg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="v9m-gO-mXr"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="bottomTextfieldConstraint" destination="NaI-Ce-fgL" id="JA4-IU-UcJ"/>
+                <outlet property="pickerDataView" destination="wFi-e7-U5N" id="bWi-qZ-Z4N"/>
+                <outlet property="pickerTextField" destination="Wxd-Lr-9vg" id="cB3-OV-vb4"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="109.48660714285714"/>
+        </tableViewCell>
+    </objects>
+</document>

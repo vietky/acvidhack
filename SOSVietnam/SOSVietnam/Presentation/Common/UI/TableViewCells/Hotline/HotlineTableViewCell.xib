@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="142" id="KGk-i7-Jjw" customClass="HotlineTableViewCell" customModule="SOSVietnam" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="142"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ac-ag-z7N">
+                        <rect key="frame" x="16" y="8" width="288" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nbd-DV-G5t">
+                        <rect key="frame" x="44" y="36.5" width="260" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9e2-19-kOm">
+                        <rect key="frame" x="44" y="65" width="260" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PhoneIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Jnf-DK-9uM">
+                        <rect key="frame" x="16" y="37" width="20" height="20"/>
+                        <color key="tintColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="E47-wh-3q4"/>
+                            <constraint firstAttribute="width" constant="20" id="NDR-mi-Tuv"/>
+                        </constraints>
+                    </imageView>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pin.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="AcC-Kw-dCa">
+                        <rect key="frame" x="16" y="65" width="20" height="21.5"/>
+                        <color key="tintColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="CMU-MX-rzb"/>
+                            <constraint firstAttribute="width" constant="20" id="M4D-xp-fXq"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Jnf-DK-9uM" firstAttribute="centerY" secondItem="Nbd-DV-G5t" secondAttribute="centerY" id="2cE-75-PX7"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="9e2-19-kOm" secondAttribute="bottom" constant="8" id="55s-RQ-1zS"/>
+                    <constraint firstItem="AcC-Kw-dCa" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="T1w-vZ-IXn"/>
+                    <constraint firstAttribute="trailing" secondItem="7ac-ag-z7N" secondAttribute="trailing" constant="16" id="bsD-qg-8F9"/>
+                    <constraint firstItem="7ac-ag-z7N" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="bsN-6I-xau"/>
+                    <constraint firstItem="9e2-19-kOm" firstAttribute="leading" secondItem="AcC-Kw-dCa" secondAttribute="trailing" constant="8" id="cyT-SH-xOZ"/>
+                    <constraint firstItem="Jnf-DK-9uM" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="dA9-P0-Eox"/>
+                    <constraint firstItem="7ac-ag-z7N" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="eXd-2k-B4j"/>
+                    <constraint firstItem="Nbd-DV-G5t" firstAttribute="leading" secondItem="Jnf-DK-9uM" secondAttribute="trailing" constant="8" id="jm5-cX-bFJ"/>
+                    <constraint firstItem="AcC-Kw-dCa" firstAttribute="centerY" secondItem="9e2-19-kOm" secondAttribute="centerY" id="kYD-oR-iJo"/>
+                    <constraint firstAttribute="trailing" secondItem="9e2-19-kOm" secondAttribute="trailing" constant="16" id="nVO-5C-PCa"/>
+                    <constraint firstItem="Nbd-DV-G5t" firstAttribute="top" secondItem="7ac-ag-z7N" secondAttribute="bottom" constant="8" id="qJD-RP-wBb"/>
+                    <constraint firstItem="9e2-19-kOm" firstAttribute="top" secondItem="Nbd-DV-G5t" secondAttribute="bottom" constant="8" id="r4k-Qc-2cW"/>
+                    <constraint firstAttribute="trailing" secondItem="Nbd-DV-G5t" secondAttribute="trailing" constant="16" id="tEm-0d-Z70"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addressIcon" destination="AcC-Kw-dCa" id="Eh6-nS-Asz"/>
+                <outlet property="addressLabel" destination="9e2-19-kOm" id="Z3N-Lt-gA0"/>
+                <outlet property="nameLabel" destination="7ac-ag-z7N" id="bfr-pZ-Ivm"/>
+                <outlet property="phoneLabel" destination="Nbd-DV-G5t" id="5JQ-pa-hDf"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="115.17857142857142"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="PhoneIcon" width="14" height="14"/>
+        <image name="pin.fill" catalog="system" width="58" height="64"/>
+    </resources>
+</document>
