@@ -14,10 +14,6 @@ The following **required** functionality is completed:
 - [x] List News: View, Share, View Analytics
 - [x] List Emergency Contacts
 
-Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
-
-1.
-2.
 
 ## Backend Architecture Overview (Planning)
 ![alt text](https://github.com/vietky/acvidhack/raw/master/SOSVN-1.png "architecture")
