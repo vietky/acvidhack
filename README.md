@@ -19,6 +19,9 @@ Please list two areas of the assignment you'd like to **discuss further with you
 1.
 2.
 
+## Architecture Overview
+![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "architecture")
+
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
