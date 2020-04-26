@@ -13,6 +13,8 @@ class FormInputTextTableViewCell: UITableViewCell {
     @IBOutlet weak var inputTextfield: UITextField!
     
     var data: FormContent?
+    var isReview = false
+    
     var callback: ((_ value: FormContent)->())?
     
     override func awakeFromNib() {
@@ -26,9 +28,14 @@ class FormInputTextTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func renderData(content: FormContent) {
+    func renderData(content: FormContent, isReview: Bool = false) {
+        self.isReview = isReview
         data = content
         inputTextfield.placeholder = content.name
+        if let contentInput = content.contentInput as? String, contentInput.isNotEmpty {
+            inputTextfield.text = contentInput
+            inputTextfield.textColor = UIColor.black
+        }
     }
 }
 extension FormInputTextTableViewCell: UITextFieldDelegate {
@@ -37,5 +44,11 @@ extension FormInputTextTableViewCell: UITextFieldDelegate {
         if let data = data {
             callback?(data)
         }
+    }
+    
+    
+    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if isReview { return false }
+        return true
     }
 }

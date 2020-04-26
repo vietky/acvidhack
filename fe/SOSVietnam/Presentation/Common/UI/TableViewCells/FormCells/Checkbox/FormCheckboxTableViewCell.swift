@@ -18,6 +18,8 @@ class FormCheckboxTableViewCell: UITableViewCell {
     
     var callback: ((_ value: FormContent)->())?
     
+    var isReview = false
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,7 +33,9 @@ class FormCheckboxTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func renderData(content: FormContent) {
+    func renderData(content: FormContent, isReview: Bool = false) {
+        self.isReview = isReview
+        
         self.data = content
         titleLabel.text = content.name
         if content.isSelected {
@@ -44,6 +48,7 @@ class FormCheckboxTableViewCell: UITableViewCell {
     }
     
     @IBAction func cellClick(_ sender: Any) {
+        if isReview { return }
         var newData = data
         newData?.isSelected = !(data?.isSelected ?? true)
         if let newData = newData {

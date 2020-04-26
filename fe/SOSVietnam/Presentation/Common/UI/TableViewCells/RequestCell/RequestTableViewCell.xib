@@ -44,7 +44,7 @@
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJl-Pj-cMJ">
                         <rect key="frame" x="152" y="135" width="120" height="40"/>
                         <color key="backgroundColor" red="0.95686274510000002" green="0.043137254899999998" blue="0.1960784314" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <state key="normal" title="Báo cáo vi phạm">
+                        <state key="normal" title="Xác nhận hỗ trợ">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>
@@ -53,12 +53,12 @@
                     </button>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ct8-lo-dk3">
                         <rect key="frame" x="16" y="135" width="120" height="40"/>
-                        <color key="backgroundColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="Zso-Hw-nwO"/>
                             <constraint firstAttribute="width" constant="120" id="ah2-29-KcJ"/>
                         </constraints>
-                        <state key="normal" title="Đã được hỗ trợ">
+                        <state key="normal" title="Xem thông tin">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                         <connections>

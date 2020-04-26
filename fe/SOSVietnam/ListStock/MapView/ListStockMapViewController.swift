@@ -228,7 +228,7 @@ extension ListStockMapViewController: MKMapViewDelegate {
         currentDepotAnnotation = view.annotation as? DepotAnnotation
         nameLabel.text = currentDepotAnnotation?.title
         addressLabel.text = currentDepotAnnotation?.address
-        addressLabel.text = currentDepotAnnotation?.phone
+        phoneButton.setTitle(currentDepotAnnotation?.phone, for: .normal)
         infoView.isHidden = false
         createPolyline()
     }

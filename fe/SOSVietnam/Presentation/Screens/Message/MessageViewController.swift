@@ -13,10 +13,11 @@ class MessageViewController: UIViewController {
     @IBOutlet weak var msgImageView: UIImageView!
     @IBOutlet weak var messageTitle: UILabel!
     
+    var text = "Yêu cầu hỗ trợ của bạn đã được ghi nhận. \n Chúng tôi sẽ liên hệ và xác thực trong thời gian sớm nhất"
     override func viewDidLoad() {
         super.viewDidLoad()
         messageTitle.textColor = UIColor.red
-        messageTitle.text = "Yêu cầu hỗ trợ của bạn đã được ghi nhận. \n Chúng tôi sẽ liên hệ và xác thực trong thời gian sớm nhất"
+        messageTitle.text = text
 //        messageTitle.text = "Cám ơn lòng tốt của bạn. Yêu cầu giúp đỡ của bạn đã được ghi nhận. \n Chúng tôi sẽ liên hệ và xác thực trong thời gian sớm nhất."
         
         // Do any additional setup after loading the view.

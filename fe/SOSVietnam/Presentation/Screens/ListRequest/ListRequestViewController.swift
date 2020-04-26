@@ -54,11 +54,11 @@ extension ListRequestViewController: UITableViewDelegate, UITableViewDataSource 
             let item = requests[indexPath.row]
             let cell = tableView.dequeueReusableCell(withIdentifier: RequestTableViewCell.subjectLabel) as! RequestTableViewCell
             cell.renderData(issueInfo: item)
-            cell.callback = { (info, isAccept) in
+            cell.callback = { [weak self] (info, isAccept) in
                 if isAccept {
-                    
+                    self?.showDetail(index: indexPath.row)
                 } else {
-                    
+                     self?.showMessage(index: indexPath.row)
                 }
             }
             return cell
@@ -70,4 +70,16 @@ extension ListRequestViewController: UITableViewDelegate, UITableViewDataSource 
         return UITableView.automaticDimension
     }
     
+    func showDetail(index: Int) {
+        let formRequestViewController = FormRequestViewController()
+        formRequestViewController.issueInfo = requests[index]
+        formRequestViewController.isReview = true
+        navigationController?.present(formRequestViewController, animated: true, completion: nil)
+    }
+    
+    func showMessage(index: Int) {
+        let messageViewController = MessageViewController()
+        messageViewController.text = "Cám ơn lòng tốt của bạn. Yêu cầu giúp đỡ của bạn đã được ghi nhận. \n Chúng tôi sẽ liên hệ và xác thực trong thời gian sớm nhất."
+        navigationController?.present(messageViewController, animated: true, completion: nil)
+    }
 }

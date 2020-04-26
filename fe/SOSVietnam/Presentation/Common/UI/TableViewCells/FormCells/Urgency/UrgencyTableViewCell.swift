@@ -9,6 +9,7 @@
 import UIKit
 
 class UrgencyTableViewCell: UITableViewCell {
+    @IBOutlet weak var titleLabel: UILabel!
     
     @IBOutlet weak var firstIcon: UIImageView!
     @IBOutlet weak var secondIcon: UIImageView!
@@ -18,6 +19,7 @@ class UrgencyTableViewCell: UITableViewCell {
     
         
     var data: FormContent?
+    var isReview = false
     
     var callback: ((_ value: FormContent)->())?
     
@@ -32,7 +34,8 @@ class UrgencyTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func renderData(content: FormContent) {
+    func renderData(content: FormContent, isReview: Bool = false) {
+        self.isReview = isReview
         self.data = content
         if let number = content.contentInput as? Int {
             switch number {
@@ -53,6 +56,7 @@ class UrgencyTableViewCell: UITableViewCell {
     }
     
     @IBAction func firstIconClick(_ sender: Any) {
+        if isReview { return }
         setFirstClick()
         data?.contentInput = 1
         if let data = data{
@@ -61,6 +65,7 @@ class UrgencyTableViewCell: UITableViewCell {
     }
     
     @IBAction func secondIconClick(_ sender: Any) {
+        if isReview { return }
         setSecondClick()
         data?.contentInput = 2
         if let data = data{
@@ -68,6 +73,7 @@ class UrgencyTableViewCell: UITableViewCell {
         }
     }
     @IBAction func thirdIconClick(_ sender: Any) {
+        if isReview { return }
         setThirdClick()
         data?.contentInput = 3
         if let data = data{
@@ -75,6 +81,7 @@ class UrgencyTableViewCell: UITableViewCell {
         }
     }
     @IBAction func fourthIconClick(_ sender: Any) {
+        if isReview { return }
         setFourthClick()
         data?.contentInput = 4
         if let data = data{
@@ -83,6 +90,7 @@ class UrgencyTableViewCell: UITableViewCell {
     }
     
     @IBAction func fifthIconClick(_ sender: Any) {
+        if isReview { return }
         setFifthClick()
         data?.contentInput = 5
         if let data = data{

@@ -39,6 +39,8 @@ class FormRequestViewController: UIViewController {
     var issueInfo: IssueInfo? = nil
     var imagePickerController : UIImagePickerController?
     
+    var isReview = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpUI()
@@ -50,6 +52,23 @@ class FormRequestViewController: UIViewController {
         //        if !(self.navigationController?.isNavigationBarHidden ?? false) {
         //            self.navigationController?.isNavigationBarHidden = true
         //        }
+        if let issueInfo = issueInfo, isReview {
+            formData = FormData(sections: [
+            FormSection(id: 0, title: "", contentItems:
+                [
+                    FormContent(id: 1, name: "Mời chọn loại yêu cầu (*)", type: .textField, isRequired: true, contentInput: issueInfo.issueType),
+                    FormContent(id: 2, name: "Bạn có thể nói rõ thêm.", type: .textBox, isRequired: false, contentInput: issueInfo.issueDescription)]),
+            FormSection(id: 3, title: "Thông tin để chúng tôi có thể hỗ trợ", contentItems:
+                [
+                    FormContent(id: 4, name: "Họ tên (*)", type: .textField, isRequired: true, contentInput: issueInfo.fullName),
+                    FormContent(id: 5, name: "Số điện thoại", type: .textField, isRequired: false , contentInput: issueInfo.phone),
+                    FormContent(id: 6, name: "Địa chỉ", type: .textField, isRequired: false, contentInput: issueInfo.address),
+                    FormContent(id: 12, name: "Không có nơi nương tựa, hoặc nhà cửa không an toàn", type: .checkbox, isRequired: issueInfo.isHomeless ?? false, isSelected: issueInfo.isHomeless ?? false),
+                    FormContent(id: 13, name: "Bệnh thể chất hoặc có những chứng bệnh tiềm ẩn (bệnh tim, cao huyết áp, tiểu đường, bệnh hô hấp mãn tính, ung thư)", type: .checkbox, isRequired: false, isSelected: issueInfo.isWellBeing ?? issueInfo.isDisability ?? false),
+                    FormContent(id: 14, name: "", type: .urgency, isRequired: false)
+            ]),
+            ])
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -162,8 +181,8 @@ extension FormRequestViewController: UITableViewDelegate, UITableViewDataSource,
             switch formContent.type {
             case .textField where formContent.id == 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: PickerTableViewCell.subjectLabel) as! PickerTableViewCell
-                cell.renderData(content: formContent)
-                cell.callbackReload = { [weak self] value in
+                cell.renderData(content: formContent, isReview: self.isReview)
+                cell.callbackReload = { [weak self] in
                     self?.tableView.reloadData()
                 }
                 cell.callback = { [weak self] value in
@@ -172,28 +191,28 @@ extension FormRequestViewController: UITableViewDelegate, UITableViewDataSource,
                 return cell
             case .textBox:
                 let cell = tableView.dequeueReusableCell(withIdentifier: FormTextViewTableViewCell.subjectLabel) as! FormTextViewTableViewCell
-                cell.renderData(content: formContent)
+                cell.renderData(content: formContent, isReview: self.isReview)
                 cell.callback = { [weak self] value in
                     self?.updateData(value: value, index: indexPath)
                 }
                 return cell
             case .checkbox:
                 let cell = tableView.dequeueReusableCell(withIdentifier: FormCheckboxTableViewCell.subjectLabel) as! FormCheckboxTableViewCell
-                cell.renderData(content: formContent)
+                cell.renderData(content: formContent, isReview: self.isReview)
                 cell.callback = { [weak self] value in
                     self?.updateData(value: value, index: indexPath)
                 }
                 return cell
             case .textField:
                 let cell = tableView.dequeueReusableCell(withIdentifier: FormInputTextTableViewCell.subjectLabel) as! FormInputTextTableViewCell
-                cell.renderData(content: formContent)
+                cell.renderData(content: formContent, isReview: self.isReview)
                 cell.callback = { [weak self] value in
                     self?.updateData(value: value, index: indexPath)
                 }
                 return cell
             case .urgency:
                 let cell = tableView.dequeueReusableCell(withIdentifier: UrgencyTableViewCell.subjectLabel) as! UrgencyTableViewCell
-                cell.renderData(content: formContent)
+                cell.renderData(content: formContent, isReview: self.isReview)
                 cell.callback = { [weak self] value in
                     self?.updateData(value: value, index: indexPath)
                 }

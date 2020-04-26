@@ -36,6 +36,7 @@ class ListNewsViewController: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         self.navigationController?.setNavigationBarHidden(true, animated: animated)
+        
     }
     @objc
     func back(sender: UIBarButtonItem) {

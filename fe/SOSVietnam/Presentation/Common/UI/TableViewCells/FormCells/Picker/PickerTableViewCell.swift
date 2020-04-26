@@ -15,9 +15,9 @@ class PickerTableViewCell: UITableViewCell {
     
     @IBOutlet weak var bottomTextfieldConstraint: NSLayoutConstraint!
     var callback: ((_ value: FormContent)->())?
-    var callbackReload: ((_ value: Void)->())?
-     var data: FormContent?
-    
+    var callbackReload: (()->())?
+    var data: FormContent?
+    var isReview: Bool = false
     var list = [IssueType(key: "Gorceries", name: "Hỗ trợ về lương thực"), IssueType(key: "Medicine", name: "Hỗ trợ về thuốc men"), IssueType(key: "Clothes", name: "Hỗ trợ về quần áo"), IssueType(key: "Social issues", name: "Hỗ trợ về tệ nạn xã hội"), IssueType(key: "Others", name: "Các vấn đề khác")]
     
     override func awakeFromNib() {
@@ -36,7 +36,13 @@ class PickerTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func renderData(content: FormContent) {
+    func renderData(content: FormContent, isReview: Bool = false) {
+        self.isReview = isReview
+        if isReview {
+            if  let contentInput = self.data?.contentInput as? String {
+                pickerTextField.text = contentInput
+            }
+        }
         self.data = content
         if  let contentInput = self.data?.contentInput as? String {
             pickerTextField.text = contentInput
@@ -71,9 +77,10 @@ extension PickerTableViewCell: UIPickerViewDelegate, UIPickerViewDataSource {
 extension PickerTableViewCell: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+        if isReview { return false }
         pickerDataView.isHidden = false
         bottomTextfieldConstraint.constant = 150
-        callbackReload?(())
+        callbackReload?()
         return false
     }
 }

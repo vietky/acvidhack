@@ -14,6 +14,7 @@ class FormTextViewTableViewCell: UITableViewCell {
     
     var data: FormContent?
     var isFirst = true
+    var isReview = false
     
     var callback: ((_ value: FormContent)->())?
     
@@ -31,7 +32,8 @@ class FormTextViewTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func renderData(content: FormContent) {
+    func renderData(content: FormContent, isReview: Bool = false) {
+        self.isReview = isReview
         self.data = content
         if let contentInput = content.contentInput as? String, contentInput.isNotEmpty {
             contentTextView.text = contentInput
@@ -48,6 +50,7 @@ extension FormTextViewTableViewCell: UITextViewDelegate {
         return true
     }
     func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+        if isReview { return false }
         if isFirst {
             contentTextView.text = ""
             isFirst = false

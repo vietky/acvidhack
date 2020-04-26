@@ -10,6 +10,7 @@ import UIKit
 
 class HomeTabbarViewController: UITabBarController {
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         UITabBar.appearance().tintColor = UIColor(hexFromString: "F40B32")
@@ -37,6 +38,7 @@ class HomeTabbarViewController: UITabBarController {
         viewControllers = tabBarList
 //        sleep(4)
         // Do any additional setup after loading the view.
+           
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,5 +47,6 @@ class HomeTabbarViewController: UITabBarController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-    }
+        self.navigationController?.navigationItem.leftBarButtonItem = nil
+    }    
 }

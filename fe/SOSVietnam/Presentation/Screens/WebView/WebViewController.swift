@@ -10,24 +10,18 @@ import UIKit
 import WebKit
 class WebViewController: UIViewController {
 
-
-    
     var webView: WKWebView!
     var url:URL?
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
-    }
-
-    override func loadView() {
-        super.loadView()
         initWebView()
         if let url = url {
             self.webView.load(URLRequest(url:url))
         }
     }
+
     
     func initWebView() {
         let webConfiguration = WKWebViewConfiguration()
@@ -68,5 +62,20 @@ extension WebViewController: WKNavigationDelegate {
     
     func webView(_ webView: WKWebView, decidePolicyFor navigationResponse: WKNavigationResponse, decisionHandler: @escaping (WKNavigationResponsePolicy) -> Void) {
         decisionHandler(.allow)
+    }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+    }
+    
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+    }
+    
+    func webViewWebContentProcessDidTerminate(_ webView: WKWebView) {
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
     }
 }
