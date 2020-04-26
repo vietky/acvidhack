@@ -1,5 +1,8 @@
 # SOS Backend
 
+### Architecture Overview
+![alt text](https://github.com/vietky/acvidhack/raw/master/SOSVN-1.png "architecture")
+
 ### Technologies Using
 - nodejs 
 - mongodb
