@@ -20,7 +20,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 2.
 
 ## Architecture Overview
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "architecture")
+![alt text](https://github.com/vietky/acvidhack/raw/master/SOSVN-1.png "architecture")
 
 ## Video Walkthrough
 
