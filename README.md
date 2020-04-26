@@ -19,7 +19,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 1.
 2.
 
-## Backend Architecture Overview
+## Backend Architecture Overview (Planning)
 ![alt text](https://github.com/vietky/acvidhack/raw/master/SOSVN-1.png "architecture")
 
 ## Video Walkthrough
